@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Columbia Heating & Air Conditioning | HVAC Services in Columbia, MD</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a73e8',
+                        secondary: '#34a853',
+                        accent: '#fbbc05',
+                        dark: '#202124',
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(26, 115, 232, 0.9) 0%, rgba(52, 168, 83, 0.9) 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .review-card {
+            transition: all 0.3s ease;
+        }
+        .review-card:hover {
+            transform: scale(1.03);
+        }
+        .map-container {
+            overflow: hidden;
+            padding-bottom: 56.25%;
+            position: relative;
+            height: 0;
+        }
+        .map-container iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+    </style>
+</head>
+<body class="font-poppins bg-gray-50">
+    <!-- Top Bar -->
+    <div class="bg-dark text-white py-2 px-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <a href="tel:+14432341863" class="flex items-center hover:text-accent">
+                    <i class="fas fa-phone-alt mr-2"></i>
+                    <span>+1 443-234-1863</span>
+                </a>
+                <a href="mailto:info@columbiahvac.com" class="flex items-center hover:text-accent">
+                    <i class="fas fa-envelope mr-2"></i>
+                    <span>info@columbiahvac.com</span>
+                </a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="hover:text-accent"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-accent"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-accent"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-accent"><i class="fab fa-google"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <img src="https://via.placeholder.com/50x50" alt="Columbia HVAC Logo" class="h-12 w-12 mr-3">
+                    <span class="text-xl font-bold text-primary">Columbia Heating & Air</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-dark hover:text-primary font-medium">Home</a>
+                    <a href="#services" class="text-dark hover:text-primary font-medium">Services</a>
+                    <a href="#about" class="text-dark hover:text-primary font-medium">About</a>
+                    <a href="#reviews" class="text-dark hover:text-primary font-medium">Reviews</a>
+                    <a href="#contact" class="text-dark hover:text-primary font-medium">Contact</a>
+                    <a href="#appointment" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300">Schedule Service</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-dark focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden py-4 border-t">
+                <a href="#home" class="block py-2 text-dark hover:text-primary">Home</a>
+                <a href="#services" class="block py-2 text-dark hover:text-primary">Services</a>
+                <a href="#about" class="block py-2 text-dark hover:text-primary">About</a>
+                <a href="#reviews" class="block py-2 text-dark hover:text-primary">Reviews</a>
+                <a href="#contact" class="block py-2 text-dark hover:text-primary">Contact</a>
+                <a href="#appointment" class="block mt-2 bg-primary text-white px-6 py-2 rounded-full text-center">Schedule Service</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Your Comfort Is Our Priority</h1>
+                <p class="text-xl mb-8">Professional HVAC services in Columbia, MD and surrounding areas. 24/7 emergency service available.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#appointment" class="bg-accent text-dark font-bold px-8 py-3 rounded-full text-center hover:bg-yellow-400 transition duration-300">Schedule Service</a>
+                    <a href="tel:+14432341863" class="bg-white text-primary font-bold px-8 py-3 rounded-full text-center hover:bg-gray-100 transition duration-300">Call Now</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://via.placeholder.com/500x400" alt="HVAC Technician" class="rounded-lg shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Ad Banner -->
+    <div class="bg-gray-100 py-4">
+        <div class="container mx-auto px-4">
+            <div class="text-center p-4 border border-gray-300 rounded-lg">
+                <p class="text-sm text-gray-600 mb-2">Advertisement</p>
+                <div class="bg-white p-4 rounded">
+                    <img src="https://via.placeholder.com/728x90" alt="Google Ad" class="mx-auto">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Our HVAC Services</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-lg shadow-lg p-6 transition duration-300">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Heating Installation & Repair</h3>
+                    <p class="text-gray-600 mb-4">Professional installation and repair of furnaces, boilers, and heat pumps to keep your home warm all winter.</p>
+                    <a href="#appointment" class="text-primary font-medium hover:underline">Learn More →</a>
+                </div>
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-lg shadow-lg p-6 transition duration-300">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Air Conditioning Services</h3>
+                    <p class="text-gray-600 mb-4">Expert AC installation, maintenance, and repair to keep your home cool and comfortable during hot summers.</p>
+                    <a href="#appointment" class="text-primary font-medium hover:underline">Learn More →</a>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-lg shadow-lg p-6 transition duration-300">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">24/7 Emergency Service</h3>
+                    <p class="text-gray-600 mb-4">Available around the clock for urgent HVAC issues that can't wait for regular business hours.</p>
+                    <a href="tel:+14432341863" class="text-primary font-medium hover:underline">Call Now →</a>
+                </div>
+                <!-- Service 4 -->
+                <div class="service-card bg-white rounded-lg shadow-lg p-6 transition duration-300">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-filter"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Indoor Air Quality</h3>
+                    <p class="text-gray-600 mb-4">Improve your home's air quality with our air purifiers, humidifiers, and ventilation solutions.</p>
+                    <a href="#appointment" class="text-primary font-medium hover:underline">Learn More →</a>
+                </div>
+                <!-- Service 5 -->
+                <div class="service-card bg-white rounded-lg shadow-lg p-6 transition duration-300">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">System Inspections</h3>
+                    <p class="text-gray-600 mb-4">Comprehensive HVAC system evaluations to identify potential issues before they become costly problems.</p>
+                    <a href="#appointment" class="text-primary font-medium hover:underline">Learn More →</a>
+                </div>
+                <!-- Service 6 -->
+                <div class="service-card bg-white rounded-lg shadow-lg p-6 transition duration-300">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Duct Cleaning</h3>
+                    <p class="text-gray-600 mb-4">Professional duct cleaning services to improve airflow and reduce allergens in your home.</p>
+                    <a href="#appointment" class="text-primary font-medium hover:underline">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="https://via.placeholder.com/500x400" alt="About Columbia HVAC" class="rounded-lg shadow-xl">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-dark mb-6">About Columbia Heating & Air Conditioning</h2>
+                    <p class="text-gray-600 mb-6">Columbia Heating and Air Conditioning, located at 9167 Red Branch Road in Columbia, MD, is dedicated to home comfort. Our experienced technicians offer comprehensive HVAC services, including emergency repairs, inspections, and installations, with a focus on prompt and efficient solutions.</p>
+                    <p class="text-gray-600 mb-6">Clear communication is our priority, ensuring customers understand the issues and solutions. We take pride in delivering exceptional service and ensuring optimal system performance for your home or business.</p>
+                    <p class="text-gray-600 mb-8">Appointments can be scheduled by calling <a href="tel:+14432341863" class="text-primary font-medium">+1 443-234-1863</a> during our business hours: 7 AM to 8 PM Monday-Friday and 9 AM to 7 PM on weekends.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center bg-white p-3 rounded-lg shadow">
+                            <div class="text-primary text-2xl mr-3">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <span>Licensed & Insured</span>
+                        </div>
+                        <div class="flex items-center bg-white p-3 rounded-lg shadow">
+                            <div class="text-primary text-2xl mr-3">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span>4.3 Google Rating</span>
+                        </div>
+                        <div class="flex items-center bg-white p-3 rounded-lg shadow">
+                            <div class="text-primary text-2xl mr-3">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <span>24/7 Emergency Service</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Customer Reviews</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-4"></div>
+                <div class="flex justify-center items-center">
+                    <div class="flex text-yellow-400 text-2xl mr-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="text-gray-600">4.3 stars based on 16 reviews</span>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="review-card bg-gray-50 rounded-lg shadow-md p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-sm text-gray-500">2 weeks ago</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Outstanding Service!</h4>
+                    <p class="text-gray-600 mb-4">"The technician arrived on time, diagnosed the issue quickly, and had my AC running in no time. Very professional and knowledgeable. Will definitely call them again!"</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-gray-300 mr-3 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah J." class="w-full h-full object-cover">
+                        </div>
+                        <span class="font-medium">Sarah J.</span>
+                    </div>
+                </div>
+                <!-- Review 2 -->
+                <div class="review-card bg-gray-50 rounded-lg shadow-md p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-sm text-gray-500">1 month ago</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Highly Recommend</h4>
+                    <p class="text-gray-600 mb-4">"Installed a new furnace for us and did an excellent job. Clean work, fair pricing, and they explained everything clearly. Our house has never been more comfortable in winter."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-gray-300 mr-3 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T." class="w-full h-full object-cover">
+                        </div>
+                        <span class="font-medium">Michael T.</span>
+                    </div>
+                </div>
+                <!-- Review 3 -->
+                <div class="review-card bg-gray-50 rounded-lg shadow-md p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span class="text-sm text-gray-500">3 months ago</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Great Emergency Service</h4>
+                    <p class="text-gray-600 mb-4">"Our AC went out on the hottest day of the year. Called Columbia Heating & Air and they had someone here within 2 hours. Fixed the problem same day. Very impressed!"</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-gray-300 mr-3 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Lisa R." class="w-full h-full object-cover">
+                        </div>
+                        <span class="font-medium">Lisa R.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+                    Read all reviews on Google
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Ad Banner -->
+    <div class="bg-gray-100 py-4">
+        <div class="container mx-auto px-4">
+            <div class="text-center p-4 border border-gray-300 rounded-lg">
+                <p class="text-sm text-gray-600 mb-2">Advertisement</p>
+                <div class="bg-white p-4 rounded">
+                    <img src="https://via.placeholder.com/728x90" alt="Google Ad" class="mx-auto">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Appointment Section -->
+    <section id="appointment" class="py-20 bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Schedule Your Service Today</h2>
+                    <p class="text-xl opacity-90">Fill out the form below and we'll contact you to confirm your appointment.</p>
+                </div>
+                <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="name" class="block mb-2">Full Name</label>
+                        <input type="text" id="name" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-20 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50" placeholder="Your Name">
+                    </div>
+                    <div>
+                        <label for="phone" class="block mb-2">Phone Number</label>
+                        <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-20 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50" placeholder="+1 (___) ___-____">
+                    </div>
+                    <div>
+                        <label for="email" class="block mb-2">Email Address</label>
+                        <input type="email" id="email" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-20 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50" placeholder="your@email.com">
+                    </div>
+                    <div>
+                        <label for="service" class="block mb-2">Service Needed</label>
+                        <select id="service" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-20 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
+                            <option value="">Select a service</option>
+                            <option value="ac-repair">AC Repair</option>
+                            <option value="heating-repair">Heating Repair</option>
+                            <option value="installation">System Installation</option>
+                            <option value="maintenance">Maintenance</option>
+                            <option value="emergency">Emergency Service</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label for="message" class="block mb-2">Additional Details</label>
+                        <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-20 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50" placeholder="Describe your HVAC issue or service needs..."></textarea>
+                    </div>
+                    <div class="md:col-span-2 text-center">
+                        <button type="submit" class="bg-accent text-dark font-bold px-10 py-4 rounded-full hover:bg-yellow-400 transition duration-300">Request Service</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                    <h2 class="text-3xl font-bold text-dark mb-6">Contact Us</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="text-primary text-2xl mr-4 mt-1">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Address</h4>
+                                <p class="text-gray-600">9167 Red Branch Rd, Columbia, MD 21045</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-primary text-2xl mr-4 mt-1">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Phone</h4>
+                                <p class="text-gray-600">
+                                    <a href="tel:+14432341863" class="hover:text-primary">+1 443-234-1863</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-primary text-2xl mr-4 mt-1">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Email</h4>
+                                <p class="text-gray-600">
+                                    <a href="mailto:info@columbiahvac.com" class="hover:text-primary">info@columbiahvac.com</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-primary text-2xl mr-4 mt-1">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Hours of Operation</h4>
+                                <ul class="text-gray-600 space-y-1">
+                                    <li class="flex justify-between">
+                                        <span>Monday - Friday</span>
+                                        <span>7:00 AM - 8:00 PM</span>
+                                    </li>
+                                    <li class="flex justify-between">
+                                        <span>Saturday - Sunday</span>
+                                        <span>9:00 AM - 7:00 PM</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <h4 class="font-bold mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-blue-700 transition duration-300">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-blue-700 transition duration-300">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-blue-700 transition duration-300">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-blue-700 transition duration-300">
+                                <i class="fab fa-google"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <h3 class="text-xl font-bold mb-4">Our Location</h3>
+                    <div class="map-container rounded-lg shadow-xl">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3086.212346383986!2d-76.85076592420803!3d39.33300607169026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c81a4c3a0c3c5d%3A0x9e0c6f3d3a3d3b7c!2s9167%20Red%20Branch%20Rd%2C%20Columbia%2C%20MD%2021045!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Frequently Asked Questions</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+            <div class="max-w-3xl mx-auto">
+                <div class="space-y-4">
+                    <!-- FAQ 1 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 focus:outline-none">
+                            <h3 class="text-lg font-medium text-left">How often should I have my HVAC system serviced?</h3>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content px-6 pb-6 hidden">
+                            <p class="text-gray-600">We recommend having your HVAC system serviced at least twice a year - once before the heating season and once before the cooling season. Regular maintenance can improve efficiency, prevent breakdowns, and extend the life of your system.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ 2 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 focus:outline-none">
+                            <h3 class="text-lg font-medium text-left">What are the signs that my AC needs repair?</h3>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content px-6 pb-6 hidden">
+                            <p class="text-gray-600">Common signs include weak airflow, warm air blowing from vents, strange noises or odors, frequent cycling, high humidity levels indoors, and increased energy bills. If you notice any of these issues, it's best to call for professional service.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ 3 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 focus:outline-none">
+                            <h3 class="text-lg font-medium text-left">How long does an HVAC system typically last?</h3>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content px-6 pb-6 hidden">
+                            <p class="text-gray-600">With proper maintenance, most HVAC systems last between 15-20 years. However, if your system is over 10 years old and requiring frequent repairs, it may be more cost-effective to replace it with a newer, more energy-efficient model.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ 4 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 focus:outline-none">
+                            <h3 class="text-lg font-medium text-left">Do you offer financing options for new system installations?</h3>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content px-6 pb-6 hidden">
+                            <p class="text-gray-600">Yes, we offer flexible financing options to help make your new HVAC system more affordable. Our team can discuss various payment plans and financing solutions that fit your budget during your consultation.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ 5 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 focus:outline-none">
+                            <h3 class="text-lg font-medium text-left">What areas do you serve?</h3>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content px-6 pb-6 hidden">
+                            <p class="text-gray-600">We serve Columbia, MD and surrounding areas including Ellicott City, Clarksville, Laurel, and parts of Howard County. Contact us to confirm if we service your specific location.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Ad Banner -->
+    <div class="bg-gray-100 py-4">
+        <div class="container mx-auto px-4">
+            <div class="text-center p-4 border border-gray-300 rounded-lg">
+                <p class="text-sm text-gray-600 mb-2">Advertisement</p>
+                <div class="bg-white p-4 rounded">
+                    <img src="https://via.placeholder.com/728x90" alt="Google Ad" class="mx-auto">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-4">Stay Updated With Our Special Offers</h2>
+                <p class="text-xl opacity-90 mb-8">Sign up for our newsletter to receive seasonal maintenance tips, special discounts, and HVAC advice.</p>
+                <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                    <input type="email" placeholder="Your Email Address" class="flex-grow px-4 py-3 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-20 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
+                    <button type="submit" class="bg-accent text-dark font-bold px-6 py-3 rounded-lg hover:bg-yellow-400 transition duration-300">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="https://via.placeholder.com/40x40" alt="Columbia HVAC Logo" class="h-10 mr-2">
+                        <span class="text-xl font-bold">Columbia Heating & Air</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Your trusted HVAC service provider in Columbia, MD and surrounding areas.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-google"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#reviews" class="text-gray-400 hover:text-white">Reviews</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">AC Repair</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Heating Repair</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">System Installation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Maintenance</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Emergency Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                            <span>9167 Red Branch Rd, Columbia, MD 21045</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3"></i>
+                            <a href="tel:+14432341863" class="hover:text-white">+1 443-234-1863</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <a href="mailto:info@columbiahvac.com" class="hover:text-white">info@columbiahvac.com</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock mr-3"></i>
+                            <span>Mon-Fri: 7AM-8PM, Sat-Sun: 9AM-7PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 mb-4 md:mb-0">© 2023 Columbia Heating & Air Conditioning. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-white">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="tel:+14432341863" class="w-16 h-16 bg-primary rounded-full shadow-xl flex items-center justify-center text-white hover:bg-blue-700 transition duration-300">
+            <i class="fas fa-phone-alt text-2xl"></i>
+        </a>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqContent = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                // Toggle content visibility
+                faqContent.classList.toggle('hidden');
+                
+                // Rotate icon
+                if (faqContent.classList.contains('hidden')) {
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
