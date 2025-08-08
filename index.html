@@ -81,22 +81,30 @@
 <body class="font-poppins bg-gray-50">
     <!-- Top Bar -->
     <div class="bg-dark text-white py-2 px-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="flex items-center space-x-4">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="flex flex-wrap justify-center md:justify-start items-center space-x-4 mb-2 md:mb-0">
                 <a href="tel:+14432341863" class="flex items-center hover:text-accent">
                     <i class="fas fa-phone-alt mr-2"></i>
                     <span>+1 443-234-1863</span>
                 </a>
+                <span class="hidden md:inline">|</span>
                 <a href="mailto:info@columbiahvac.com" class="flex items-center hover:text-accent">
                     <i class="fas fa-envelope mr-2"></i>
                     <span>info@columbiahvac.com</span>
                 </a>
+                <span class="hidden md:inline">|</span>
+                <div class="flex items-center hover:text-accent">
+                    <i class="fas fa-map-marker-alt mr-2"></i>
+                    <span>9167 Red Branch Rd, Columbia, MD</span>
+                </div>
             </div>
             <div class="flex items-center space-x-4">
                 <a href="#" class="hover:text-accent"><i class="fab fa-facebook-f"></i></a>
                 <a href="#" class="hover:text-accent"><i class="fab fa-twitter"></i></a>
                 <a href="#" class="hover:text-accent"><i class="fab fa-instagram"></i></a>
                 <a href="#" class="hover:text-accent"><i class="fab fa-google"></i></a>
+                <a href="#" class="hover:text-accent"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="hover:text-accent"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
     </div>
@@ -108,10 +116,12 @@
                 <div class="flex items-center">
                     <img src="https://i.imgur.com/kWubyA5.png" alt="Columbia Heating & Air" class="h-16 w-auto">
                 </div>
-                <div class="hidden md:flex items-center space-x-10 flex-grow pl-10">
+                <div class="hidden md:flex items-center space-x-6 lg:space-x-8 flex-grow pl-10">
                     <a href="#home" class="text-dark hover:text-primary font-medium">Home</a>
                     <a href="#services" class="text-dark hover:text-primary font-medium">Services</a>
                     <a href="#about" class="text-dark hover:text-primary font-medium">About</a>
+                    <a href="#testimonials" class="text-dark hover:text-primary font-medium">Testimonials</a>
+                    <a href="#faq" class="text-dark hover:text-primary font-medium">FAQ</a>
                     <a href="#reviews" class="text-dark hover:text-primary font-medium">Reviews</a>
                     <a href="#contact" class="text-dark hover:text-primary font-medium">Contact</a>
                     <a href="#appointment" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300">Schedule Service</a>
@@ -134,18 +144,38 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-gradient text-white py-20 md:py-32">
+    <section id="home" class="hero-gradient text-white py-16 md:py-24">
         <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 mb-10 md:mb-0">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6">Your Comfort Is Our Priority</h1>
-                <p class="text-xl mb-8">Professional HVAC services in Columbia, MD and surrounding areas. 24/7 emergency service available.</p>
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                    <a href="#appointment" class="bg-accent text-dark font-bold px-8 py-3 rounded-full text-center hover:bg-yellow-400 transition duration-300">Schedule Service</a>
-                    <a href="tel:+14432341863" class="bg-white text-primary font-bold px-8 py-3 rounded-full text-center hover:bg-gray-100 transition duration-300">Call Now</a>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Your Comfort Is Our Priority</h1>
+                <p class="text-xl md:text-2xl mb-2">Professional HVAC Services in Columbia, MD</p>
+                <p class="text-lg mb-8">24/7 Emergency Service • Free Estimates • 100% Satisfaction Guarantee</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
+                    <a href="#appointment" class="bg-accent text-dark font-bold px-8 py-3 rounded-full text-center hover:bg-yellow-400 transition duration-300 text-lg">Schedule Service</a>
+                    <a href="tel:+14432341863" class="bg-white text-primary font-bold px-8 py-3 rounded-full text-center hover:bg-gray-100 transition duration-300 text-lg">Call Now: +1 443-234-1863</a>
+                </div>
+                <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                    <div class="flex items-center bg-white bg-opacity-20 px-4 py-2 rounded-full">
+                        <i class="fas fa-check-circle text-secondary mr-2"></i>
+                        <span>Licensed & Insured</span>
+                    </div>
+                    <div class="flex items-center bg-white bg-opacity-20 px-4 py-2 rounded-full">
+                        <i class="fas fa-star text-secondary mr-2"></i>
+                        <span>4.3 Google Rating</span>
+                    </div>
+                    <div class="flex items-center bg-white bg-opacity-20 px-4 py-2 rounded-full">
+                        <i class="fas fa-clock text-secondary mr-2"></i>
+                        <span>24/7 Emergency Service</span>
+                    </div>
                 </div>
             </div>
-            <div class="md:w-1/2 flex justify-center">
-                <img src="https://www.ahs.com/contentassets/cdbe5c1ef52e4e60a3bece034e2da5cf/ahs_plansandcoverage_hvac_tuneup.jpg" alt="HVAC Technician Servicing Unit" class="rounded-lg shadow-2xl w-full h-auto">
+            <div class="md:w-1/2 flex justify-center mt-10 md:mt-0">
+                <div class="relative">
+                    <img src="https://www.ahs.com/contentassets/cdbe5c1ef52e4e60a3bece034e2da5cf/ahs_plansandcoverage_hvac_tuneup.jpg" alt="HVAC Technician Servicing Unit" class="rounded-lg shadow-2xl w-full h-auto">
+                    <div class="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-primary text-white px-6 py-3 rounded-full font-bold shadow-lg">
+                        <i class="fas fa-phone mr-2"></i> Call Now: +1 443-234-1863
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -170,6 +200,7 @@
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Our HVAC Services</h2>
+                <p class="text-gray-600 mb-4 max-w-3xl mx-auto">Comprehensive heating and cooling solutions for residential and commercial properties</p>
                 <div class="w-20 h-1 bg-primary mx-auto"></div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -273,10 +304,28 @@
                 </div>
                 <div class="md:w-1/2">
                     <h2 class="text-3xl font-bold text-dark mb-6">About Columbia Heating & Air Conditioning</h2>
-                    <p class="text-gray-600 mb-6">Columbia Heating and Air Conditioning, located at 9167 Red Branch Road in Columbia, MD, is dedicated to home comfort. Our experienced technicians offer comprehensive HVAC services, including emergency repairs, inspections, and installations, with a focus on prompt and efficient solutions.</p>
-                    <p class="text-gray-600 mb-6">Since 2005, we've been serving Howard County with pride. Our NATE-certified technicians stay up-to-date with the latest HVAC technology to provide the best service possible.</p>
-                    <p class="text-gray-600 mb-8">Appointments can be scheduled by calling <a href="tel:+14432341863" class="text-primary font-medium">+1 443-234-1863</a> during our business hours: 7 AM to 8 PM Monday-Friday and 9 AM to 7 PM on weekends.</p>
-                    <div class="flex flex-wrap gap-4">
+                    <p class="text-gray-600 mb-4">Columbia Heating and Air Conditioning, located at 9167 Red Branch Road in Columbia, MD, is dedicated to home comfort. Our experienced technicians offer comprehensive HVAC services, including emergency repairs, inspections, and installations, with a focus on prompt and efficient solutions.</p>
+                    <p class="text-gray-600 mb-4">Since 2005, we've been serving Howard County with pride. Our NATE-certified technicians stay up-to-date with the latest HVAC technology to provide the best service possible.</p>
+                    <p class="text-gray-600 mb-6">Appointments can be scheduled by calling <a href="tel:+14432341863" class="text-primary font-medium">+1 443-234-1863</a> during our business hours: 7 AM to 8 PM Monday-Friday and 9 AM to 7 PM on weekends.</p>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-secondary mr-2"></i>
+                            <span>Free Estimates</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-secondary mr-2"></i>
+                            <span>Same-Day Service</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-secondary mr-2"></i>
+                            <span>100% Satisfaction Guarantee</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-secondary mr-2"></i>
+                            <span>Emergency Service</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-4 mb-6">
                         <div class="flex items-center bg-white p-3 rounded-lg shadow">
                             <div class="text-primary text-2xl mr-3">
                                 <i class="fas fa-check-circle"></i>
@@ -296,16 +345,18 @@
                             <span>24/7 Emergency Service</span>
                         </div>
                     </div>
+                    <a href="#appointment" class="inline-block bg-primary text-white px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition duration-300">Learn More About Us</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Reviews Section -->
-    <section id="reviews" class="py-20 bg-white">
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Customer Reviews</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Customer Testimonials</h2>
+                <p class="text-gray-600 mb-4">Hear what our satisfied customers have to say about our services</p>
                 <div class="w-20 h-1 bg-primary mx-auto mb-4"></div>
                 <div class="flex justify-center items-center">
                     <div class="flex text-yellow-400 text-2xl mr-4">
@@ -543,7 +594,7 @@
                 <div class="lg:w-1/2">
                     <h3 class="text-xl font-bold mb-4">Our Location</h3>
                     <div class="map-container rounded-lg shadow-xl">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3086.212346383986!2d-76.85076592420803!3d39.33300607169026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c81a4c3a0c3c5d%3A0x9e0c6f3d3a3d3b7c!2s9167%20Red%20Branch%20Rd%2C%20Columbia%2C%20MD%2021045!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3086.275711517232!2d-76.8569336846713!3d39.2305160795257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c80f7d5a0f4b8b%3A0x8c5a0f7d5a0f4b8b!2sColumbia%20Heating%20and%20Air%20Conditioning!5e0!3m2!1sen!2sus!4v1645484528456!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
             </div>
@@ -551,10 +602,11 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="py-20 bg-white">
+    <section id="faq" class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Frequently Asked Questions</h2>
+                <p class="text-gray-600 mb-4">Find answers to common questions about our HVAC services</p>
                 <div class="w-20 h-1 bg-primary mx-auto"></div>
             </div>
             <div class="max-w-3xl mx-auto">
