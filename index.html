@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Columbia Heating & Air Conditioning provides professional HVAC services in Columbia, MD. 24/7 emergency service available.">
-    <meta name="keywords" content="HVAC, heating, air conditioning, Columbia MD, AC repair, furnace repair">
+    <meta name="description" content="Columbia Heating & Air Conditioning provides professional HVAC services in Columbia, MD. 24/7 emergency service available. Expert heating, cooling, and air quality solutions.">
+    <meta name="keywords" content="HVAC, heating, air conditioning, Columbia MD, AC repair, furnace repair, duct cleaning, indoor air quality, emergency HVAC service">
     <meta name="author" content="Columbia Heating & Air Conditioning">
-    <title>Columbia Heating & Air Conditioning | HVAC Services in Columbia, MD</title>
+    <title>Columbia Heating & Air Conditioning | Professional HVAC Services in Columbia, MD</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -31,6 +31,9 @@
         .hero-gradient {
             background: linear-gradient(135deg, rgba(26, 115, 232, 0.9) 0%, rgba(52, 168, 83, 0.9) 100%);
         }
+        .service-card {
+            transition: all 0.3s ease;
+        }
         .service-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
@@ -53,6 +56,25 @@
             height: 100%;
             width: 100%;
             position: absolute;
+        }
+        .testimonial-slider {
+            position: relative;
+            overflow: hidden;
+        }
+        .testimonial-slide {
+            display: none;
+        }
+        .testimonial-slide.active {
+            display: block;
+        }
+        .brand-logo {
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+        .brand-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
         }
     </style>
 </head>
@@ -158,6 +180,11 @@
                     </div>
                     <h3 class="text-xl font-bold mb-3">Heating Installation & Repair</h3>
                     <p class="text-gray-600 mb-4">Professional installation and repair of furnaces, boilers, and heat pumps to keep your home warm all winter.</p>
+                    <ul class="text-gray-600 mb-4 text-sm">
+                        <li class="flex items-center mb-1"><i class="fas fa-check-circle text-secondary mr-2"></i> Furnace Installation & Repair</li>
+                        <li class="flex items-center mb-1"><i class="fas fa-check-circle text-secondary mr-2"></i> Boiler Services</li>
+                        <li class="flex items-center mb-1"><i class="fas fa-check-circle text-secondary mr-2"></i> Heat Pump Installation</li>
+                    </ul>
                     <a href="#appointment" class="text-primary font-medium hover:underline">Learn More →</a>
                 </div>
                 <!-- Service 2 -->
@@ -167,6 +194,11 @@
                     </div>
                     <h3 class="text-xl font-bold mb-3">Air Conditioning Services</h3>
                     <p class="text-gray-600 mb-4">Expert AC installation, maintenance, and repair to keep your home cool and comfortable during hot summers.</p>
+                    <ul class="text-gray-600 mb-4 text-sm">
+                        <li class="flex items-center mb-1"><i class="fas fa-check-circle text-secondary mr-2"></i> Central AC Installation</li>
+                        <li class="flex items-center mb-1"><i class="fas fa-check-circle text-secondary mr-2"></i> AC Repair & Maintenance</li>
+                        <li class="flex items-center mb-1"><i class="fas fa-check-circle text-secondary mr-2"></i> Ductless Mini-Split Systems</li>
+                    </ul>
                     <a href="#appointment" class="text-primary font-medium hover:underline">Learn More →</a>
                 </div>
                 <!-- Service 3 -->
@@ -176,6 +208,11 @@
                     </div>
                     <h3 class="text-xl font-bold mb-3">24/7 Emergency Service</h3>
                     <p class="text-gray-600 mb-4">Available around the clock for urgent HVAC issues that can't wait for regular business hours.</p>
+                    <ul class="text-gray-600 mb-4 text-sm">
+                        <li class="flex items-center mb-1"><i class="fas fa-check-circle text-secondary mr-2"></i> Emergency Repairs</li>
+                        <li class="flex items-center mb-1"><i class="fas fa-check-circle text-secondary mr-2"></i> Same-Day Service</li>
+                        <li class="flex items-center mb-1"><i class="fas fa-check-circle text-secondary mr-2"></i> No Overtime Charges</li>
+                    </ul>
                     <a href="tel:+14432341863" class="text-primary font-medium hover:underline">Call Now →</a>
                 </div>
                 <!-- Service 4 -->
@@ -185,6 +222,11 @@
                     </div>
                     <h3 class="text-xl font-bold mb-3">Indoor Air Quality</h3>
                     <p class="text-gray-600 mb-4">Improve your home's air quality with our air purifiers, humidifiers, and ventilation solutions.</p>
+                    <ul class="text-gray-600 mb-4 text-sm">
+                        <li class="flex items-center mb-1"><i class="fas fa-check-circle text-secondary mr-2"></i> Air Purification Systems</li>
+                        <li class="flex items-center mb-1"><i class="fas fa-check-circle text-secondary mr-2"></i> Humidifiers & Dehumidifiers</li>
+                        <li class="flex items-center mb-1"><i class="fas fa-check-circle text-secondary mr-2"></i> UV Germicidal Lights</li>
+                    </ul>
                     <a href="#appointment" class="text-primary font-medium hover:underline">Learn More →</a>
                 </div>
                 <!-- Service 5 -->
@@ -194,6 +236,11 @@
                     </div>
                     <h3 class="text-xl font-bold mb-3">System Inspections</h3>
                     <p class="text-gray-600 mb-4">Comprehensive HVAC system evaluations to identify potential issues before they become costly problems.</p>
+                    <ul class="text-gray-600 mb-4 text-sm">
+                        <li class="flex items-center mb-1"><i class="fas fa-check-circle text-secondary mr-2"></i> Energy Efficiency Audits</li>
+                        <li class="flex items-center mb-1"><i class="fas fa-check-circle text-secondary mr-2"></i> Preventative Maintenance</li>
+                        <li class="flex items-center mb-1"><i class="fas fa-check-circle text-secondary mr-2"></i> System Performance Reports</li>
+                    </ul>
                     <a href="#appointment" class="text-primary font-medium hover:underline">Learn More →</a>
                 </div>
                 <!-- Service 6 -->
@@ -203,8 +250,16 @@
                     </div>
                     <h3 class="text-xl font-bold mb-3">Duct Cleaning</h3>
                     <p class="text-gray-600 mb-4">Professional duct cleaning services to improve airflow and reduce allergens in your home.</p>
+                    <ul class="text-gray-600 mb-4 text-sm">
+                        <li class="flex items-center mb-1"><i class="fas fa-check-circle text-secondary mr-2"></i> Complete Duct System Cleaning</li>
+                        <li class="flex items-center mb-1"><i class="fas fa-check-circle text-secondary mr-2"></i> Mold & Allergen Removal</li>
+                        <li class="flex items-center mb-1"><i class="fas fa-check-circle text-secondary mr-2"></i> Improved Air Circulation</li>
+                    </ul>
                     <a href="#appointment" class="text-primary font-medium hover:underline">Learn More →</a>
                 </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-block bg-dark text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition duration-300">View All Services</a>
             </div>
         </div>
     </section>
@@ -219,7 +274,7 @@
                 <div class="md:w-1/2">
                     <h2 class="text-3xl font-bold text-dark mb-6">About Columbia Heating & Air Conditioning</h2>
                     <p class="text-gray-600 mb-6">Columbia Heating and Air Conditioning, located at 9167 Red Branch Road in Columbia, MD, is dedicated to home comfort. Our experienced technicians offer comprehensive HVAC services, including emergency repairs, inspections, and installations, with a focus on prompt and efficient solutions.</p>
-                    <p class="text-gray-600 mb-6">Clear communication is our priority, ensuring customers understand the issues and solutions. We take pride in delivering exceptional service and ensuring optimal system performance for your home or business.</p>
+                    <p class="text-gray-600 mb-6">Since 2005, we've been serving Howard County with pride. Our NATE-certified technicians stay up-to-date with the latest HVAC technology to provide the best service possible.</p>
                     <p class="text-gray-600 mb-8">Appointments can be scheduled by calling <a href="tel:+14432341863" class="text-primary font-medium">+1 443-234-1863</a> during our business hours: 7 AM to 8 PM Monday-Friday and 9 AM to 7 PM on weekends.</p>
                     <div class="flex flex-wrap gap-4">
                         <div class="flex items-center bg-white p-3 rounded-lg shadow">
